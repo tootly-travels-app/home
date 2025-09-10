@@ -1,44 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll animation for page load
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Add loading animation to images
-    const images = document.querySelectorAll('.photo-grid img');
-    
-    images.forEach((img, index) => {
-        img.style.opacity = '0';
-        img.style.transform = 'translateY(20px)';
-        
-        img.addEventListener('load', () => {
-            setTimeout(() => {
-                img.style.transition = 'all 0.6s ease-out';
-                img.style.opacity = '1';
-                img.style.transform = 'translateY(0)';
-            }, index * 100);
-        });
-        
-        // Fallback for cached images
-        if (img.complete) {
-            img.dispatchEvent(new Event('load'));
-        }
-    });
-    
-    // Add click handler for image modal (future enhancement)
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            img.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                img.style.transform = '';
-            }, 150);
+    // Smooth scroll for CTA button
+    const ctaButton = document.querySelector('.cta-button');
+    ctaButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#gallery').scrollIntoView({
+            behavior: 'smooth'
         });
     });
-    
-    // Parallax effect for header
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const header = document.querySelector('header');
-        if (header) {
-            header.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for animations
+    const sections = document.querySelectorAll('.gallery, .journey-highlights, .cta-section');
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(section);
     });
+
+    // Video play/pause on scroll
+    const video = document.querySelector('video');
+    if (video) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        videoObserver.observe(video);
+    }
 });

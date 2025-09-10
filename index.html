@@ -3,33 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tootly Travels</title>
+    <title>Tootly Travels - Uncover the World's Hidden Gems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Tootly Travels</h1>
-        <p>Explore the beauty of nature through our collection of stunning photos.</p>
-    </header>
-    <main>
-        <section class="gallery">
-            <h2>Nature Gallery</h2>
-            <div class="photo-grid">
-                <img src="assets/nature-photos/dji_fly_20250228_164508_579_1740861630013_photo.jpg" alt="Aerial Nature View">
-                <img src="assets/nature-photos/PXL_20250228_132649407.jpg" alt="Nature Photography">
-                <video controls>
-                    <source src="assets/nature-photos/MOVIE-3~2.mp4" type="video/mp4">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tootly Travels</h1>
+            <p class="tagline">Uncover the World's Hidden Gems</p>
+            <a href="#gallery" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/alps-mountains.jpg" alt="Alps Mountains">
+                    <div class="overlay">
+                        <h3>Alpine Adventure</h3>
+                        <p>Majestic peaks of the Swiss Alps</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/bali-beach.jpg" alt="Bali Beach">
+                    <div class="overlay">
+                        <h3>Tropical Paradise</h3>
+                        <p>Pristine beaches of Bali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Highlights Section -->
+    <section class="journey-highlights">
+        <div class="container">
+            <h2>Our Latest Adventure</h2>
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/travel-highlights.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Tootly Travels. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Our Journey</h2>
+            <p>Follow us for more travel inspiration and hidden gems</p>
+            <a href="#" class="subscribe-btn">Subscribe to Our Newsletter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+            <p>&copy; 2024 Tootly Travels. All rights reserved.</p>
+        </div>
     </footer>
+
     <script src="scripts/main.js"></script>
 </body>
-</html><!-- Updated Wed Sep 10 06:46:52 PM BST 2025 -->
+</html>
