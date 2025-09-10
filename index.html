@@ -6,51 +6,118 @@
     <title>Tootly Travels - Uncover the World's Hidden Gems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌅 Tootly Travels</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#video">Adventures</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Tootly Travels</h1>
-            <p class="tagline">Uncover the World's Hidden Gems</p>
-            <a href="#gallery" class="cta-button">Start Your Journey</a>
+            <h1 class="hero-title">Tootly Travels</h1>
+            <p class="hero-subtitle">Uncover the World's Hidden Gems</p>
+            <p class="hero-description">Journey through breathtaking landscapes and discover the extraordinary beauty of our planet</p>
+            <a href="#gallery" class="cta-button">
+                <span>Start Your Journey</span>
+                <div class="button-glow"></div>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- Photo Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2>Photo Gallery</h2>
+            <div class="section-header">
+                <h2>Captured Moments</h2>
+                <p>Every frame tells a story of adventure and wonder</p>
+            </div>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/nature-photos/dji_fly_20250228_164508_579_1740861630013_photo.jpg" alt="Tromso Aerial View">
+                <div class="gallery-item featured">
+                    <img src="assets/nature-photos/dji_fly_20250228_164508_579_1740861630013_photo.jpg" alt="Aerial Mountain View" loading="lazy">
                     <div class="overlay">
-                        <h3>Arctic Adventure</h3>
-                        <p>Breathtaking aerial view of Tromso</p>
+                        <h3>Arctic Majesty</h3>
+                        <p>Soaring above pristine wilderness</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/nature-photos/PXL_20250228_132649407.jpg" alt="Tromso Landscape">
+                    <img src="assets/nature-photos/dji_fly_20250228_161406_548_1740861363660_photo.jpg" alt="Drone Photography" loading="lazy">
                     <div class="overlay">
-                        <h3>Northern Beauty</h3>
-                        <p>Stunning landscapes of Norway</p>
+                        <h3>Sky High</h3>
+                        <p>Perspectives from above</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/nature-photos/dji_fly_20250228_161428_550_1740861407755_photo.jpg" alt="Landscape View" loading="lazy">
+                    <div class="overlay">
+                        <h3>Golden Hour</h3>
+                        <p>Nature's perfect lighting</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/nature-photos/PXL_20250228_132649407.jpg" alt="Mountain Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Mountain Serenity</h3>
+                        <p>Peaceful mountain vistas</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/nature-photos/IMG_3565.jpg" alt="Nature Scene" loading="lazy">
+                    <div class="overlay">
+                        <h3>Wild Beauty</h3>
+                        <p>Untamed natural landscapes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/nature-photos/dji_fly_20250228_164508_579_1740861630013_photo (1).jpg" alt="Scenic View" loading="lazy">
+                    <div class="overlay">
+                        <h3>Endless Horizons</h3>
+                        <p>Where earth meets sky</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/nature-photos/PXL_20250228_132649407 (1).jpg" alt="Adventure Scene" loading="lazy">
+                    <div class="overlay">
+                        <h3>Adventure Awaits</h3>
+                        <p>Discover the unknown</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey Highlights Section -->
-    <section class="journey-highlights">
+    <!-- Video Section -->
+    <section class="video-section" id="video">
         <div class="container">
-            <h2>Our Latest Adventure</h2>
+            <div class="section-header">
+                <h2>Journey in Motion</h2>
+                <p>Experience the thrill of aerial exploration</p>
+            </div>
             <div class="video-container">
                 <video autoplay muted loop playsinline>
-                    <source src="assets/nature-photos/MOVIE-3~2.mp4" type="video/mp4">
+                    <source src="assets/nature-photos/dji_fly_20250228_164332_572_1740861561634_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <div class="play-icon">▶</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -58,21 +125,43 @@
     <!-- Call-to-Action Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Join Our Journey</h2>
-            <p>Follow us for more travel inspiration and hidden gems</p>
-            <a href="#" class="subscribe-btn">Subscribe to Our Newsletter</a>
+            <div class="cta-content">
+                <h2>Ready for Your Next Adventure?</h2>
+                <p>Join thousands of explorers discovering the world's most breathtaking destinations</p>
+                <div class="cta-buttons">
+                    <a href="#" class="primary-btn">Subscribe to Newsletter</a>
+                    <a href="#" class="secondary-btn">Follow Our Journey</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
-            <div class="social-links">
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Twitter">🐦</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🌅 Tootly Travels</h3>
+                    <p>Capturing the world's most extraordinary moments</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <a href="#">Destinations</a>
+                        <a href="#">Photography</a>
+                        <a href="#">Adventures</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                        <a href="#">Newsletter</a>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 Tootly Travels. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tootly Travels. Crafted with passion for adventure.</p>
+            </div>
         </div>
     </footer>
 
